@@ -56,7 +56,7 @@ export default [
 	},
 	{
 		path: '/',
-		name: '主页',
+		name: '司机大屏',
 		component: () =>
 			import(/* webpackChunkName: "views" */ '@/views/home/index'),
 	},

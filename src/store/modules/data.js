@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { car, clean, property, map, city, smart } from '@/api/data';
+import { car, clean, property, map, city, smart, device } from '@/api/data';
 import { setStore, getStore } from '@/util/store';
 const data = {
 	namespaced: true,
@@ -51,6 +51,14 @@ const data = {
 		Smart({}, params) {
 			return new Promise((resolve) => {
 				smart(params).then((res) => {
+					resolve(res.data);
+				});
+			});
+		},
+		//智能中心
+		Device({}, params) {
+			return new Promise((resolve) => {
+				device(params).then((res) => {
 					resolve(res.data);
 				});
 			});

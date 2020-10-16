@@ -39,6 +39,7 @@ export default {
 			speedY: Math.PI / 360, //球-帧绕y轴旋转的角度
 			tags: [],
 			timer: null,
+			streetList: this.data, //街道列表
 		};
 	},
 	props: {
@@ -73,7 +74,15 @@ export default {
 			clearInterval(this.timer);
 		}
 	},
-	watch: {},
+	watch: {
+		data: {
+			handler(newData, oldData) {
+				this.streetList = newData;
+				this.createData();
+			},
+			deep: true,
+		},
+	},
 	computed: {
 		CX() {
 			//球心x坐标
@@ -87,12 +96,12 @@ export default {
 	methods: {
 		createData() {
 			let tags = [];
-			for (let i = 0; i < this.data.length; i++) {
+			for (let i = 0; i < this.streetList.length; i++) {
 				let tag = {};
-				let k = -1 + (2 * (i + 1) - 1) / this.data.length;
+				let k = -1 + (2 * (i + 1) - 1) / this.streetList.length;
 				let a = Math.acos(k);
-				let b = a * Math.sqrt(this.data.length * Math.PI); //计算标签相对于球心的角度
-				tag.text = this.data[i].name;
+				let b = a * Math.sqrt(this.streetList.length * Math.PI); //计算标签相对于球心的角度
+				tag.text = this.streetList[i].name;
 				tag.x = this.CX + this.RADIUS * Math.sin(a) * Math.cos(b); //根据标签角度求出标签的x,y,z坐标
 				tag.y = this.CY + this.RADIUS * Math.sin(a) * Math.sin(b);
 				tag.z = this.RADIUS * Math.cos(a);

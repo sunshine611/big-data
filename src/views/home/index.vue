@@ -55,7 +55,7 @@
 					<div
 						class="border-bg1 ml-5 justify-content-center align-items-center"
 					>
-						<div class="title">车辆派出频次</div>
+						<div class="title">车辆月派出频次</div>
 						<div class="vh1"></div>
 						<div class="vh2"></div>
 						<Echart
@@ -132,10 +132,9 @@
 						<div class="title">司机列表</div>
 						<div class="vh4"></div>
 						<div class="row list-title">
-							<div class="col-2">司机类型</div>
 							<div class="col-3">车牌号</div>
-							<div class="col-2">司机姓名</div>
-							<div class="col-2">手机号</div>
+							<div class="col-3">司机姓名</div>
+							<div class="col-3">手机号</div>
 							<div class="col-3">身份证</div>
 						</div>
 						<vue-seamless-scroll
@@ -148,10 +147,9 @@
 								v-for="(item, index) in carList"
 								:key="index"
 							>
-								<div class="col-2">{{ item.name + '司机' }}</div>
 								<div class="col-3">{{ item.license_plate }}</div>
-								<div class="col-2">{{ item.user_login }}</div>
-								<div class="col-2">{{ item.mobile }}</div>
+								<div class="col-3">{{ item.user_login }}</div>
+								<div class="col-3">{{ item.mobile }}</div>
 								<div class="col-3">{{ item.id_card }}</div>
 							</div>
 						</vue-seamless-scroll>
@@ -547,6 +545,7 @@ export default {
 						data: this.carTypeStatusList.map((item) => {
 							return item.name;
 						}),
+
 						axisLabel: {
 							interval: 0,
 							textStyle: {
@@ -568,7 +567,8 @@ export default {
 					{
 						type: 'value',
 						scale: true,
-						name: '单位：量',
+						name: '单位：辆',
+						min: 0,
 						nameTextStyle: {
 							color: '#fff',
 							fontSize: 10,
@@ -807,7 +807,7 @@ export default {
 			this.getCarTypeNumList();
 			this.getCarSent();
 			this.getCarTypeStatus();
-		}, 120000);
+		}, 600000);
 	},
 	beforeDestroy() {
 		if (this.timer) {

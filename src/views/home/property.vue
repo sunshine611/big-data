@@ -30,7 +30,10 @@
 						<div class="map-border map-bottom-right"></div>
 						<div class="title">小区坐标点位图</div>
 						<el-amap
+							ref="amapDemo"
 							vid="amapDemo"
+							viewMode="3D"
+							:pitch="20"
 							:zoom="zoom"
 							:center="center"
 							class="map-view"
@@ -56,9 +59,9 @@
 						<div class="col-12 mb-4">
 							<div class="border-bg1">
 								<div class="title">设备预警图</div>
-								<span class="text-detail" @click="warningDialog = true"
+								<router-link class="text-detail" to="/warning"
 									>查看详情 <i class="fa fa-plus-square-o"></i
-								></span>
+								></router-link>
 								<Echart
 									height="100%"
 									width="100%"
@@ -536,6 +539,9 @@ export default {
 				})
 				.then((res) => {
 					this.communityList = res.data;
+					if (this.communityList.length > 0) {
+						this.center = [res.data[0].lng, res.data[0].lat];
+					}
 					this.markers = res.data.map((item) => {
 						return {
 							position: [item.lng, item.lat],
@@ -569,7 +575,10 @@ export default {
 		//获取设备预警数据
 		getWarningData() {
 			this.$store
-				.dispatch('data/Property', { do: 'deviceWarning' })
+				.dispatch('data/Property', {
+					do: 'deviceWarning',
+					region_id: this.cityInfo.region_id,
+				})
 				.then((res) => {
 					if (res.code === 1) {
 						this.warningData = res.data;
@@ -579,7 +588,10 @@ export default {
 		//获取预警列表
 		getWarningList() {
 			this.$store
-				.dispatch('data/Property', { do: 'warningDetail' })
+				.dispatch('data/Property', {
+					do: 'warningDetail',
+					region_id: this.cityInfo.region_id,
+				})
 				.then((res) => {
 					if (res.code === 1) {
 						this.warningList = res.data;

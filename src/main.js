@@ -46,7 +46,6 @@ VueAMap.initAMapApiLoader({
 		'AMap.CircleEditor',
 	],
 	v: '1.4.4',
-	uiVersion: '1.0.11',
 });
 Vue.use(Element, {
 	i18n: (key, value) => i18n.t(key, value),

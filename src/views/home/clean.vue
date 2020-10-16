@@ -66,7 +66,7 @@
 				</div>
 				<div class="col-4">
 					<div class="border-bg2">
-						<div class="title">已承包街道</div>
+						<div class="title">服务街道</div>
 						<TagCloud
 							height="26vh"
 							width="100%"
@@ -534,7 +534,7 @@ export default {
 			this.getOrderCountPie();
 			this.getMonthOrderList();
 			this.getCleanList();
-		}, 10000);
+		}, 600000);
 	},
 	mounted() {},
 	beforeDestroy() {

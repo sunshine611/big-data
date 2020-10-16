@@ -36,3 +36,9 @@ export const smart = (params) =>
 		data: params,
 		method: 'post',
 	});
+export const device = (params) =>
+	request({
+		url: baseUrl + '/realshow/device/index',
+		data: params,
+		method: 'post',
+	});

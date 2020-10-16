@@ -96,7 +96,7 @@ export default {
 			cityList: [], //城市列表
 			props: {
 				multiple: true,
-				value: 'id',
+				value: 'region_id',
 				label: 'name',
 				children: 'children',
 				emitPath: false,
@@ -120,6 +120,8 @@ export default {
 		} else if (this.$parent.$options.name === 'property') {
 			this.num = 4;
 			this.text = '恒亚再生-物业端数据大屏';
+		} else if (this.$parent.$options.name === 'warning') {
+			this.text = '恒亚再生-化粪池预警大屏';
 		}
 	},
 	watch: {},
@@ -166,7 +168,9 @@ export default {
 					}
 				})
 				.then(() => {
-					this.city = this.cityInfo.region_id.split(',');
+					if (this.cityInfo.region_id) {
+						this.city = this.cityInfo.region_id.split(',');
+					}
 				});
 		},
 		//选择城市

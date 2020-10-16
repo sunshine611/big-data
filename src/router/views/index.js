@@ -3,31 +3,43 @@ export default [
 	{
 		path: '/',
 		redirect: '/home/index',
+		name: '司机大屏',
 		component: () =>
 			import(/* webpackChunkName: "views" */ '@/views/home/index'),
 	},
 	{
 		path: '/clean',
+		name: '清掏大屏',
 		component: () =>
 			import(/* webpackChunkName: "views" */ '@/views/home/clean'),
 	},
 	{
 		path: '/property',
+		name: '物业大屏',
 		component: () =>
 			import(/* webpackChunkName: "views" */ '@/views/home/property'),
 	},
 	{
+		path: '/warning',
+		name: '预警大屏',
+		component: () =>
+			import(/* webpackChunkName: "views" */ '@/views/home/warning'),
+	},
+	{
 		path: '/smart',
+		name: '智能中心',
 		component: () =>
 			import(/* webpackChunkName: "views" */ '@/views/home/smart'),
 	},
 	{
 		path: '/car-map',
+		name: '车辆定位',
 		component: () =>
 			import(/* webpackChunkName: "views" */ '@/views/home/carMap'),
 	},
 	{
 		path: '/gps-map',
+		name: '车辆轨迹',
 		component: () =>
 			import(/* webpackChunkName: "views" */ '@/views/home/GPSMap'),
 	},

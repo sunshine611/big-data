@@ -210,7 +210,7 @@ export default {
 				},
 				series: [
 					{
-						name: '车辆占比',
+						name: '有机肥销售占比',
 						type: 'pie',
 						radius: '60%',
 						center: ['35%', '60%'],
@@ -390,7 +390,7 @@ export default {
 				],
 				series: [
 					{
-						name: '车辆类型',
+						name: '有机肥月产出量',
 						type: 'bar',
 						barWidth: '40%',
 						barMaxWidth: '40%',
@@ -662,7 +662,7 @@ export default {
 			this.getDayShitList();
 			this.getFertilizerBar();
 			this.getFertilizerSellBar();
-		}, 10000);
+		}, 600000);
 	},
 	beforeDestroy() {
 		if (this.timer) {
