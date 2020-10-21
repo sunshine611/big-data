@@ -58,7 +58,7 @@
 					<div class="row">
 						<div class="col-12 mb-4">
 							<div class="border-bg1">
-								<div class="title">设备预警图</div>
+								<div class="title">清掏提示</div>
 								<router-link class="text-detail" to="/warning"
 									>查看详情 <i class="fa fa-plus-square-o"></i
 								></router-link>

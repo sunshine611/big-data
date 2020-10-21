@@ -45,7 +45,7 @@
 						@click="goUrl(4)"
 						:class="num === 4 ? 'active' : ''"
 					>
-						物业大屏
+						城市大屏
 					</div>
 					<div class="menu city" @click="dialogCity = true">
 						选择城市
@@ -119,7 +119,7 @@ export default {
 			this.text = '恒亚再生-清掏公司端数据大屏';
 		} else if (this.$parent.$options.name === 'property') {
 			this.num = 4;
-			this.text = '恒亚再生-物业端数据大屏';
+			this.text = '恒亚再生-城市数据大屏';
 		} else if (this.$parent.$options.name === 'warning') {
 			this.text = '恒亚再生-化粪池预警大屏';
 		}
