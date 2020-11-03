@@ -110,18 +110,18 @@ export default {
 	mounted() {
 		if (this.$parent.$options.name === 'smart') {
 			this.num = 1;
-			this.text = '恒亚再生-智能控制中心';
+			this.text = '智能控制中心';
 		} else if (this.$parent.$options.name === 'car') {
 			this.num = 2;
-			this.text = '恒亚再生-司机端数据大屏';
+			this.text = '司机端数据大屏';
 		} else if (this.$parent.$options.name === 'clean') {
 			this.num = 3;
-			this.text = '恒亚再生-清掏公司端数据大屏';
+			this.text = '清掏公司端数据大屏';
 		} else if (this.$parent.$options.name === 'property') {
 			this.num = 4;
-			this.text = '恒亚再生-城市数据大屏';
+			this.text = '城市数据大屏';
 		} else if (this.$parent.$options.name === 'warning') {
-			this.text = '恒亚再生-化粪池预警大屏';
+			this.text = '化粪池预警大屏';
 		}
 	},
 	watch: {},

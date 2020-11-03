@@ -2,10 +2,10 @@
  * 全局配置文件
  */
 export default {
-	title: '恒亚再生资源利用有限公司',
-	logo: '恒亚',
+	title: '大数据系统',
+	logo: '大数据系统',
 	key: 'hengya', //配置主键,目前用于存储
-	indexTitle: '恒亚再生——数据大屏',
+	indexTitle: '数据大屏',
 	lockPage: '/lock',
 	tokenTime: 600000, //token过期时间
 	Authorization: 'xx-token',
