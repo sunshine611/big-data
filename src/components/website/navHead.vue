@@ -116,7 +116,7 @@ export default {
 			this.text = '司机端数据大屏';
 		} else if (this.$parent.$options.name === 'clean') {
 			this.num = 3;
-			this.text = '清掏公司端数据大屏';
+			this.text = '清掏端数据大屏';
 		} else if (this.$parent.$options.name === 'property') {
 			this.num = 4;
 			this.text = '城市数据大屏';

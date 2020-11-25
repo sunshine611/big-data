@@ -22,9 +22,9 @@
 		<div class="earth">
 			<img src="../../static/earth.png" />
 		</div>
-		<div class="login-box">
+		<div class="login-box" style="width:400px">
 			<div class="login-logo">
-				<img src="../../static/login_logo.png" />
+				<!-- <img src="../../static/login_logo.png" /> -->
 			</div>
 			<userLogin v-if="activeName === 'user'"></userLogin>
 		</div>

@@ -21,7 +21,10 @@
 		</vue-particles>
 		<NavHead></NavHead>
 		<div class="transport">
-			<img src="../../static/car.png" class="car" />
+			<img
+				src="https://hengya.obs.cn-south-1.myhuaweicloud.com/dataview/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20201103152114.png"
+				class="car"
+			/>
 		</div>
 		<div class="container-fluid mt-4">
 			<div class="row m-2 mb-4 car-num-box">

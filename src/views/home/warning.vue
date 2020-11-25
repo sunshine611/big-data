@@ -37,7 +37,7 @@
 								<li
 									v-for="item in cityList"
 									:key="item.id"
-									@click="selectCity(item.id)"
+									@click="selectCity(item)"
 									:class="{ on: item.id === on }"
 								>
 									<span class="relative"
@@ -237,8 +237,9 @@ export default {
 			});
 		},
 		//选择城市
-		selectCity(id) {
-			this.on = id;
+		selectCity(item) {
+			this.on = item.id;
+			this.center = [item.lng, item.lat];
 			this.getWarningList();
 		},
 		//表格行选中
@@ -250,7 +251,7 @@ export default {
 };
 </script>
 
-<style lang="scss" scope>
+<style lang="scss" scoped="scoped">
 @font-face {
 	font-family: UNIDREAMLED;
 	src: url('../../static/font/UNIDREAMLED.TTF');
