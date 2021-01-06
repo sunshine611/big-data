@@ -92,8 +92,8 @@ export default {
 		};
 		return {
 			loginForm: {
-				mobile: '13459409066',
-				password: '123456',
+				mobile: '13338435519',
+				password: 'xinshuo123',
 				// code: "",
 				// redomStr: ""
 			},
@@ -120,9 +120,11 @@ export default {
 		};
 	},
 	created() {
-		this.refreshCode();
+		// this.refreshCode();
 	},
-	mounted() {},
+	mounted() {
+		this.handleLogin();
+	},
 	computed: {
 		...mapGetters(['tagWel']),
 	},

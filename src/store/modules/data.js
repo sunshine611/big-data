@@ -4,7 +4,7 @@ import { setStore, getStore } from '@/util/store';
 const data = {
 	namespaced: true,
 	state: {
-		cityInfo: getStore({ name: 'cityInfo' }) || {},
+		cityInfo: getStore({ name: 'cityInfo' }) || { region_id: '350121' },
 	},
 	actions: {
 		//车

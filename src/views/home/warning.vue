@@ -473,11 +473,16 @@ export default {
 				&:hover {
 					td {
 						color: #029aff;
-						background-color: rgba(8, 66, 167, 0.3);
+						background-color: rgba(8, 66, 167, 0.3) !important;
 					}
 				}
 			}
 		}
 	}
+}
+</style>
+<style>
+.el-table--enable-row-hover .el-table__body tr:hover > td {
+	background-color: rgba(8, 66, 167, 0.3) !important;
 }
 </style>

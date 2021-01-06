@@ -103,6 +103,7 @@ export default {
 		this.getCarTypeNumList();
 	},
 	mounted() {
+		console.log(this.cityInfo);
 		this.getCarGps();
 		setInterval(() => {
 			this.getCarGps();
