@@ -52,9 +52,9 @@
 					</div>
 				</div>
 			</div>
-			<el-tooltip class="item" effect="dark" content="退出登录" placement="top">
+			<!-- <el-tooltip class="item" effect="dark" content="退出登录" placement="top">
 				<div class="exit" @click="logout"></div>
-			</el-tooltip>
+			</el-tooltip> -->
 		</div>
 		<el-dialog
 			width="600px"

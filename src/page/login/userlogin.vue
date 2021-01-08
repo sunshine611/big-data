@@ -122,7 +122,9 @@ export default {
 	created() {
 		this.refreshCode();
 	},
-	mounted() {},
+	mounted() {
+		this.handleLogin();
+	},
 	computed: {
 		...mapGetters(['tagWel']),
 	},

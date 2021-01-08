@@ -15,7 +15,7 @@ export default {
 	isFirstPage: false,
 	fistPage: {
 		label: '智能中心',
-		value: '/smart',
+		value: '/property',
 		params: {},
 		query: {},
 		meta: {
