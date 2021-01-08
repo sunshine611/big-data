@@ -34,7 +34,7 @@ module.exports = {
 		proxy: {
 			'/realshow': {
 				// target: 'https://dev.hyzszy.com.cn/',
-				target: 'https://hyzszy.com.cn/',
+				target: 'https://xinwc.cn/',
 				ws: true,
 				changeOrigin: true,
 				pathRewrite: {
