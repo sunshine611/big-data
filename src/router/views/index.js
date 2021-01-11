@@ -15,7 +15,7 @@ export default [
 	},
 	{
 		path: '/property',
-		name: '物业大屏',
+		name: '城市大屏',
 		component: () =>
 			import(/* webpackChunkName: "views" */ '@/views/home/property'),
 	},
