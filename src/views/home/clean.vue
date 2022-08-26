@@ -780,7 +780,7 @@ export default {
 			&-right {
 				display: inline-block;
 				width: 63%;
-				/deep/ .el-progress__text {
+				::v-deep .el-progress__text {
 					color: #fff;
 				}
 			}
